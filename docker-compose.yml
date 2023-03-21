@@ -102,7 +102,8 @@ services:
       - "dhis2-init.sh && sleep infinity"
 
   dhis2:
-    image: "ghcr.io/baosystems/dhis2:${DHIS2_TAG:-latest}"
+    #image: "ghcr.io/baosystems/dhis2:${DHIS2_TAG:-latest}"
+    image: "dhis2/core:2.40.0-rc"
     depends_on:
       - dhis2_init
     restart: unless-stopped
